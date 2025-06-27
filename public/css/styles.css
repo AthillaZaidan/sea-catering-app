@@ -6,7 +6,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: #131313;
+    background-color:  #020509;
     min-height: 100vh;
     margin: 0;
     font-optical-sizing: auto;
@@ -51,7 +51,7 @@ img {
     font-size: 1.5rem;
     white-space: nowrap;
     font-size: 1.8rem;
-    transition: font-size 0.3s ease;
+    transition: font-size 0.5s ease;
 }
 
 .header.scrolled{
@@ -72,7 +72,6 @@ img {
     gap: 5px;
     align-items: center;
     flex-wrap: wrap;
-    transition: font-size 0.3s ease;
 }
 
 .aboutpage,
@@ -86,6 +85,7 @@ img {
     font-size: 1.1rem;
     transition: background-color 0.2s;
     border-radius: 8px;
+    transition: font-size 0.5s ease;
 }
 
 .header.scrolled .aboutpage,
@@ -157,6 +157,11 @@ img {
     padding: 0 2vw;
     box-sizing: border-box;
     align-items: center;
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding-top: 20px; 
+    padding-bottom: 40px; 
+    background-color: #FFF2E0;
 }
 
 
@@ -228,66 +233,234 @@ img {
     z-index: 2;
 }
 
-@media (max-width: 800px) {
+
+.welcoming-section {
+    color: #112D4E;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.welcoming-section .welcome-text {
+    display: flex;
+    width: 70%;
+    text-align: center;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    font-weight: 300;   
+    font-family: "Roboto", sans-serif;
+}
+
+#feature-listing {
+    font-size: 2rem;
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    color: #112D4E; 
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.feature-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.feature-item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 150px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #112D4E;
+    gap: 10px;
+    color: #FFF2E0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.feature-item:hover{
+    transform: translateY(-5px);
+}
+.feature-img {
+    width: 100px; 
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px; 
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.1));
+}
+
+.feature-text {
+    font-size: 1.1rem; 
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    color: #FFF2E0; 
+    text-transform: capitalize; 
+    line-height: 1.4;
+}
+
+.footer{
+    color: white;
+    padding: 30px;
+    padding-top: 0px;
+    background-color: #0D223A;
+}
+
+.footer a{ 
+    text-decoration: none;
+    color: white;
+}
+
+.footer-socmed{
+    display: flex;
+    gap: 10px;
+}
+a:hover{
+    transform: scale(1.06);
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 3vw;
+        height: 60px;
+    }
+    .title {
+        font-size: 1.6rem;
+    }
+    .alldropdown {
+        gap: 10px;
+    }
+    .aboutpage, .menupage, .socmedpage {
+        font-size: 1rem;
+    }
+    .container { 
+        padding: 15px; 
+    }
+    .welcoming-section .welcome-text {
+        font-size: 1.4rem;
+    }
+    #feature-listing {
+        font-size: 1.8rem;
+    }
+    .feature-item {
+        flex-basis: 250px; 
+        max-width: calc(33.33% - 15px);
+    }
+}
+
+
+@media (max-width: 768px) {
     .header {
         flex-direction: column;
         height: auto;
-        padding: 8px 2vw; 
+        padding: 15px 3vw;
         border-radius: 0;
+        gap: 15px;
     }
     .alldropdown {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 0;
         width: 100%;
     }
     .title {
-        justify-content: center;
-        width: 100%;
-        font-size: 1.2rem; 
         text-align: center;
+        width: 100%;
+        font-size: 1.4rem; 
+        margin-bottom: 10px;
     }
-    .container{
+    .aboutpage, .menupage, .socmedpage {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.95rem; 
+    }
+    .dropdown {
+        left: 50%;
+        transform: translateX(-50%) scaleY(0.95);
+        transform-origin: top center;
+    }
+    .dropdown-about:hover .dropdown,
+    .dropdown-menu:hover .dropdown,
+    .dropdown-socmed:hover .dropdown{
+        transform: translateX(-50%) scaleY(1);
+    }
+
+    .container {
         width: 95%; 
         margin-top: 10px;
+        padding: 10px;
     }
-    .top {
+    .main-slogan {
+        min-height: 350px;
+    }
+    .main-slogan .slogan {
+        font-size: 2rem;
+    }
+    #slogan-sea {
+        font-size: 2.5rem;
+    }
+
+    .welcoming-section .welcome-text {
+        font-size: 1.1rem; 
+        width: 90%;
+    }
+    #feature-listing {
+        font-size: 1.6rem;
+    }
+    .feature-container {
         flex-direction: column;
-        align-items: center;
-        width: 100%;
+        gap: 20px;
+        padding: 0 10px;
     }
-    .main-image {
-        width: 100%;
-        max-width: 100%;
+    .feature-item {
+        width: 90%; 
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 15px;
     }
-    .slogan {
-        font-size: 1.1rem;
-        align-items: center;
-        text-align: center;
+    .feature-img {
+        width: 80px;
+        height: 80px;
+    }
+    .feature-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.2rem;
+    }
+    .main-slogan {
+        min-height: 250px;
+    }
+    .main-slogan .slogan {
+        font-size: 1.5rem;
     }
     #slogan-sea {
         font-size: 2rem;
     }
-    .dropdown a {
+    .welcoming-section .welcome-text {
+        font-size: 0.95rem;
+    }
+    #feature-listing {
+        font-size: 1.4rem;
+    }
+    .feature-item {
+        padding: 10px;
+    }
+    .feature-img {
+        width: 60px;
+        height: 60px;
+    }
+    .feature-text {
         font-size: 0.9rem;
-        padding: 8px 12px;
-    }
-}
-
-@media (max-width: 600px) {
-    .header {
-        padding: 4px 1vw;
-    }
-    .title {
-        font-size: 1rem;
-    }
-    .slogan {
-        font-size: 0.9rem;
-    }
-    #slogan-sea {
-        font-size: 1.5rem;
-    }
-    .dropdown a {
-        font-size: 0.8rem;
     }
 }
