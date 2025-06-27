@@ -1,0 +1,80 @@
+* {
+    /* border: 1px solid red; */
+    font-family: "Lexend", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    justify-content: space-between;
+    /* border: 5px solid blue ; */
+    width: 100%;
+    padding: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutpage,
+.menupage,
+.socmedpage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown-about,
+.dropdown-menu,
+.dropdown-socmed {
+    position: relative;
+    display: inline-block;
+}
+.arrow{
+    display: flex;
+    align-items: center;
+
+}
+.dropdown {
+    opacity: 0;
+    transform: translateY(20px) scaleY(0.95);
+    pointer-events: none;
+    position: absolute;
+    background: #f5f1e8;
+    min-width: 150px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: 20px 0;
+    z-index: 1;
+    transition: opacity 0.25s cubic-bezier(.4,0,.2,1), transform 0.25s cubic-bezier(.4,0,.2,1);
+}
+
+.dropdown-about:hover .dropdown,
+.dropdown-menu:hover .dropdown,
+.dropdown-socmed:hover .dropdown{
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+    pointer-events: auto;
+}
+
+.dropdown a{
+    color: #222;
+    padding: 12px 24px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+.dropdown a:hover {
+  background: #e6e1d5;
+}
