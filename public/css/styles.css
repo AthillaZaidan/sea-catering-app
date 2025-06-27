@@ -306,24 +306,57 @@ img {
     line-height: 1.4;
 }
 
-.footer{
-    color: white;
-    padding: 30px;
-    padding-top: 0px;
-    background-color: #0D223A;
-}
-
-.footer a{ 
-    text-decoration: none;
-    color: white;
-}
-
-.footer-socmed{
+.footer {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin-top: auto;
+    padding: 25px 4vw;
+    background-color: #0D223A;
+    color: #F9F7F7;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
 }
-a:hover{
-    transform: scale(1.06);
+
+.footer .contact-info {
+    flex-basis: 300px;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+.footer .contact-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #DBE2EF;
+}
+.footer .contact-info p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.footer .footer-note {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(249, 247, 247, 0.7);
+    padding: 10px 0;
+}
+.footer .footer-socmed {
+    display: flex;
+    gap: 15px;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+.footer .footer-socmed a { 
+    text-decoration: none;
+    color: #F9F7F7;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease;
+}
+.footer .footer-socmed a:hover {
+    color: #DBE2EF;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 1024px) {
@@ -355,7 +388,6 @@ a:hover{
     }
 }
 
-
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -385,11 +417,19 @@ a:hover{
         left: 50%;
         transform: translateX(-50%) scaleY(0.95);
         transform-origin: top center;
+        min-width: 120px;
+        padding: 8px 0;
+        border-radius: 8px;
     }
     .dropdown-about:hover .dropdown,
     .dropdown-menu:hover .dropdown,
     .dropdown-socmed:hover .dropdown{
         transform: translateX(-50%) scaleY(1);
+    }
+
+    .dropdown a {
+        padding: 8px 15px;
+        font-size: 0.85rem; 
     }
 
     .container {
@@ -432,6 +472,20 @@ a:hover{
     .feature-text {
         font-size: 1rem;
     }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 3vw;
+        border-radius: 0;
+        gap: 20px;
+    }
+    .footer .contact-info,
+    .footer .footer-note,
+    .footer .footer-socmed {
+        width: 100%;
+        margin-right: 0;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -443,6 +497,9 @@ a:hover{
     }
     .main-slogan .slogan {
         font-size: 1.5rem;
+    }
+    .dropdown{
+        min-width: 100px;
     }
     #slogan-sea {
         font-size: 2rem;
@@ -462,5 +519,13 @@ a:hover{
     }
     .feature-text {
         font-size: 0.9rem;
+    }
+    footer {
+        padding: 15px 2vw;
+    }
+    .footer .contact-info p,
+    .footer .footer-note p,
+    .footer .footer-socmed a {
+        font-size: 0.85rem;
     }
 }
