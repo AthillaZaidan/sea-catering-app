@@ -1,5 +1,5 @@
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: "Lexend", sans-serif;
 }
 
@@ -85,15 +85,12 @@ a {
     transition: font-size 0.5s ease;
 }
 
-.navlink .scrolled {
-    font-size: 0.9rem;
-}
 .navigation .navlink:hover{
     background: #0d223a;
 }
 
-.navigation .navlink:active{
-    background-color: #3F72AF;
+.navigation .navlink.active{
+    background-color: #24374d;
     font-weight: bold;
 }
 
