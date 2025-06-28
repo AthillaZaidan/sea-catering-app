@@ -1,4 +1,3 @@
-
 const mainHeader = document.querySelector('header.header');
 
 const SCROLL_THRESHOLD = 20; 
