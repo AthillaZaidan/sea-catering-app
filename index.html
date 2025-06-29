@@ -48,7 +48,7 @@
                 </div>
             </nav>
         </header>
-        <main class="container">
+        <main class="container" id="home">
             <section class="main-slogan">
                 <div class="background-overlay"></div>
                 <div class="main-slogan-content">
@@ -84,6 +84,50 @@
                         <img src="./public/img/nutrition.png" class="feature-img">
                         <div class="feature-text">
                             detailed nutritional information
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="menu" class="meal-plan-section">
+                <div class="menu-welcome">Our Meal Plans</div>
+                <div class="menu-container">
+                    <div class="meal-plan-choice">
+                        <button class="plan-category active" data-category="all">All Plans</button>
+                        <button class="plan-category" data-category="diet">Diet Plan</button>
+                        <button class="plan-category" data-category="royal">Royal Plan</button>
+                        <button class="plan-category" data-category="protein">Protein Plan</button>
+                    </div>
+                    <div class="meal-plan-container">
+                        <div class="meal-plan-card" data-category="diet">
+                            <img src="./public/img/diet.jpg" class="meal-plan-img">
+                            <div class="meal-plan-header">Diet Plan</div>
+                            <div class="meal-price">Rp30.000,00 per Meal</div>
+                            <div class="meal-desc">A balanced diet plan focusing on low-calorie, high-nutrient meals for weight management. 
+                                Includes fresh vegetables and lean protein.</div>
+                            <button class="see-more-meal" data-plan="diet">See More</button>
+                        </div>
+                        <div class="meal-plan-card" data-category="royal">
+                            <img src="./public/img/royal.jpg" class="meal-plan-img">
+                            <div class="meal-plan-header">Royal Plan</div>
+                            <div class="meal-price">Rp60.000,00 per Meal</div>
+                            <div class="meal-desc">An exclusive plan offering gourmet healthy meals with premium ingredients and exquisite flavors. Experience luxury in every bite.</div>
+                            <button class="see-more-meal" data-plan="royal">See More</button>
+                        </div>
+                        <div class="meal-plan-card" data-category="protein">
+                            <img src="./public/img/protein.jpg" class="meal-plan-img">
+                            <div class="meal-plan-header">Protein Plan</div>
+                            <div class="meal-price">Rp40.000,00 per Meal</div>
+                            <div class="meal-desc">Designed for muscle building and recovery, packed with high-quality protein sources and complex carbohydrates.</div>
+                            <button class="see-more-meal" data-plan="protein">See More</button>
+                        </div>
+                    </div>
+                    <div id="mealDetailsModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-button">&times;</span>
+                            <h3 id="modalPlanName"></h3>
+                            <p id="modalPlanPrice"></p>
+                            <p id="modalPlanDescription"></p>
+                            <ul id="modalPlanBenefits"></ul>
                         </div>
                     </div>
                 </div>
